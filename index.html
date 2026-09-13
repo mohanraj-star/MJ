@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MJ Website — a personal space for blogs, information, community and contact.">
+  <meta name="theme-color" content="#08090d">
+  <title>MJ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+  <button class="clock-logo" id="clock-logo" type="button" aria-label="MJ clock. Click to return home." aria-expanded="false">
+    <span class="clock-face">
+      <span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span>
+      <span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span>
+      <span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span><span class="clock-mark"></span>
+      <span class="clock-hand clock-hour" id="clock-hour"></span>
+      <span class="clock-hand clock-minute" id="clock-minute"></span>
+      <span class="clock-hand clock-second" id="clock-second"></span>
+      <span class="clock-center-dot"></span>
+    </span>
+  </button>
+
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <a class="nav-brand" href="#home" aria-label="MJ Website home">
+      <span class="nav-brand-slot" aria-hidden="true"></span>
+      <span class="brand-mj">MJ</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#information">Information</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+      <li class="account-nav-item">
+        <button class="account-nav-trigger" id="account-nav-trigger" type="button" aria-expanded="false" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <circle cx="12" cy="8.2" r="3.6"/>
+            <path d="M4.5 20c1.2-3.6 4.3-5.6 7.5-5.6s6.3 2 7.5 5.6"/>
+          </svg>
+          <span class="account-status-dot" id="account-status-dot" aria-hidden="true"></span>
+        </button>
+        <div class="account-dropdown" id="account-dropdown" role="menu" aria-hidden="true">
+          <a href="account.php?view=login" id="account-link-login" role="menuitem">Login</a>
+          <a href="account.php?view=register" id="account-link-register" role="menuitem">Register</a>
+        </div>
+      </li>
+
+
+
+    </ul>
+    <button class="search-toggle" id="search-toggle" type="button" aria-label="Open Google search">⌕</button>
+  </nav>
+
+  <main>
+    <header id="home" class="hero page-section">
+      <div class="hero-content">
+        <div class="hero-title-block">
+          <h1 class="site-title" aria-label="MJ">
+            <span class="mj-monogram"><span class="mj-letter mj-m">M</span><span class="mj-letter mj-j">J</span></span>
+          </h1>
+          <div class="hero-clock-anchor" id="hero-clock-anchor" aria-hidden="true"></div>
+          <p class="hero-tagline">Elegant · Personal · Timeless</p>
+        </div>
+        <p class="hero-subtitle">Welcome to my page — a quiet digital space for ideas, stories, information and people.</p>
+        <div class="hero-actions">
+          <a href="#blogs" class="btn btn-primary">Explore</a>
+          <a href="#contacts" class="btn btn-secondary">Contact MJ</a>
+        </div>
+        <p class="time-line"><span class="time-dot"></span><span id="world-time">Synchronizing world time…</span></p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glow-orbit orbit-one"></div><div class="glow-orbit orbit-two"></div>
+        <div class="hero-emblem">MJ</div>
+      </div>
+    </header>
+
+    <section id="blogs" class="section page-section">
+      <div class="container">
+        <p class="eyebrow">Stories & thoughts</p>
+        <h2 class="section-title">Blogs</h2>
+        <p class="section-subtitle">A simple place for ideas, learning, experiences and things worth sharing.</p>
+        <div class="content-grid">
+          <article class="glass-card"><span class="card-number">01</span><h3>Learning</h3><p>Notes, experiments and lessons from building, studying and creating.</p></article>
+          <article class="glass-card"><span class="card-number">02</span><h3>Ideas</h3><p>Personal thoughts and observations, presented clearly and honestly.</p></article>
+          <article class="glass-card"><span class="card-number">03</span><h3>Projects</h3><p>A growing record of the things I make and the skills behind them.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="information" class="section page-section section-alt">
+      <div class="container split">
+        <div><p class="eyebrow">About this page</p><h2 class="section-title">Information</h2></div>
+        <div class="info-copy"><p>MJ Website is designed as a personal home on the web — clean, focused and easy to navigate.</p><p>The visual language stays dark and atmospheric so the MJ identity, clock and content remain the focus.</p></div>
+      </div>
+    </section>
+
+    <section id="community" class="section page-section">
+      <div class="container">
+        <p class="eyebrow">Stay connected</p><h2 class="section-title">Community</h2>
+        <div class="community-card glass-card"><div><h3>A place for people</h3><p>Connect, share ideas and keep the conversation respectful. New community features can be added here later without changing the core MJ design.</p><div class="social-links" aria-label="Follow MJ on social media">
+          <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="MJ on Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.4c0-.87.24-1.46 1.49-1.46H16V4.34C15.72 4.3 14.74 4.2 13.6 4.2c-2.33 0-3.93 1.42-3.93 4.03V10.5H7.2v3h2.47V21h3.83z"/></svg>
+          </a>
+          <a class="social-link" href="https://instagram.com/innocent_boy_.fx" target="_blank" rel="noopener" aria-label="MJ on Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+          </a>
+          <a class="social-link" href="https://wa.me/916385376635" target="_blank" rel="noopener" aria-label="Message MJ on WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.35 12.77L3.5 20.5l4.36-1.14A8.5 8.5 0 1 0 12 3.5zm0 1.6a6.9 6.9 0 0 1 5.86 10.55l-.24.38.6 2.2-2.26-.59-.37.22A6.9 6.9 0 1 1 12 5.1zm-2.44 3.4c-.17 0-.45.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.8 2.75 4.36 3.75 2.16.85 2.6.68 3.07.64.47-.04 1.5-.61 1.71-1.2.21-.6.21-1.1.15-1.2-.06-.1-.24-.17-.5-.3-.26-.13-1.5-.74-1.74-.82-.23-.09-.4-.13-.57.13-.17.26-.65.82-.8.99-.15.17-.29.19-.55.06-.26-.13-1.1-.4-2.09-1.28-.77-.69-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.4-.79-1.92-.2-.5-.42-.44-.57-.44z"/></svg>
+          </a>
+        </div></div><a class="btn btn-secondary" href="#contacts">Join the conversation</a></div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section page-section section-alt">
+      <div class="container contact-layout">
+        <div><p class="eyebrow">Say hello</p><h2 class="section-title">Contacts</h2><p class="section-subtitle">Send a message to MJ GROUPS</p></div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <input type="hidden" name="csrf_token" id="csrf-token" value="">
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" maxlength="80" autocomplete="name" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" maxlength="160" autocomplete="email" required></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" maxlength="2000" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Message</button><div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+
+
+  <div class="search-panel" id="search-panel" aria-hidden="true">
+    <div class="search-backdrop" data-close-search></div>
+    <form class="search-box" id="google-search-form" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+      <button type="button" class="search-close" data-close-search aria-label="Close search">×</button>
+      <p class="eyebrow">MJ Website</p><h2>Search the web</h2>
+      <input type="search" name="q" id="google-search-input" placeholder="Search Google…" autocomplete="off" required>
+      <div class="search-actions">
+        <button class="btn btn-primary" type="submit">GOOGLE SEARCH</button>
+        <button class="btn btn-secondary" id="mj-search-button" type="button">MJ Search</button>
+      </div>
+      <div id="mj-search-results" class="mj-search-results" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <footer class="footer"><div class="container"><p>© 2026 MJ GROUPS & COMPANY</p></div></footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
